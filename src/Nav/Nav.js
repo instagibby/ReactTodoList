@@ -4,7 +4,7 @@ class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-        <h1>Nav</h1>
+        <h1>Spencer Davis React Task List Project!</h1>
       </div>
     );
   }

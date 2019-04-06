@@ -5,7 +5,11 @@ class AddItem extends Component {
   render() {
     return (
       <div className="AddItem">
-        <h1>Add Item</h1>
+        <input type="text" placeholder="What do you need to do...?" />
+        <input type="text" placeholder="Description" />
+        <input type="date" />
+        <br/>
+        <button>Add Item</button>
       </div>
     );
   }
