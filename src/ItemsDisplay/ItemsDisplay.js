@@ -8,6 +8,6 @@ export default (props) => (
     key={props.index} 
     onClick={props.toggleComplete} 
   >
-    {props.text}
+    {props.text} - {props.description}
   </div>
 );

@@ -15,10 +15,12 @@ export default class AddItem extends Component {
     event.preventDefault();
     this.props.onSubmit({
       text: this.state.text,
+      description: this.state.description,
       complete: false
     });
     this.setState({
-      text: ""
+      text: "",
+      description : ""
     })
   }
 
@@ -30,7 +32,12 @@ export default class AddItem extends Component {
           placeholder="What do you need to do...?" 
           value={this.state.text} 
           onChange={this.handleChange} />
-        <input type="text" placeholder="Description" />
+        <input 
+          name="description" 
+          placeholder="Description" 
+          value={this.state.description}
+          onChange={this.handleChange}
+          />
         <button onClick={this.handleSubmit}>Add Todo</button>
       </form>
     );

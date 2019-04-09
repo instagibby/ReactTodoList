@@ -41,6 +41,7 @@ class TodoList extends Component {
           key={index}
           todo={todo}
           text={todo.text} 
+          description={todo.description}
           toggleComplete={() => this.toggleComplete(index)}
           />
         ))}
