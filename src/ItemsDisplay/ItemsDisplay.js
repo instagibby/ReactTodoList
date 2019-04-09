@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class ItemsDisplay extends Component {
-  render() {
-    return (
-      <div className="ItemsDisplay">
-        <h1>Items Display</h1>
-      </div>
-    );
-  }
-}
-
-export default ItemsDisplay;
+export default (props) => ( 
+  <div 
+    style={{
+      textDecoration: props.todo.complete ?"Line-through" : ""
+    }}
+    key={props.index} 
+    onClick={props.toggleComplete} 
+  >
+    {props.text}
+  </div>
+);
