@@ -7,10 +7,16 @@ import './App.css';
 
 
 class TodoList extends Component {
-  state = {
-    todos: []
-  };
-
+  constructor(props) {
+    super(props);
+    
+    this.state = { 
+      todos: [] 
+    };
+    this.addTodo = this.addTodo.bind(this);
+    this.toggleComplete = this.toggleComplete.bind(this);
+  }
+  
   addTodo = (todo) => {
     this.setState({
       todos: [todo, ...this.state.todos]
@@ -40,7 +46,6 @@ class TodoList extends Component {
           <ItemsDisplay 
           key={index}
           todo={todo}
-          text={todo.text} 
           description={todo.description}
           toggleComplete={() => this.toggleComplete(index)}
           />
